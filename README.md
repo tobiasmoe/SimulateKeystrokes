@@ -20,3 +20,6 @@ This program also uses your cursor when running.
 * Change code in file
   * Function focusWebPage() has two SetCursorPos() that you have to (most likely) change the x and y coordinate on
   * Line 48 function myFile.open(), change this to the file you want to read from (e.g., the files included in this repo
+
+
+For any questions email me at: tobben166@hotmail.com

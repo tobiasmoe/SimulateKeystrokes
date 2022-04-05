@@ -68,7 +68,7 @@ void readKeystrokes() {         // Go through a file and run all keystrokes
     timeSinceLastKey is in MS
     user_id, session and repetition does not need to be INT
 
-    IF your code does not have user_id, session and or repetition, then remove/comment lines 79-81 depending on what is missing
+    IF your code does not have user_id, session and or repetition, then remove/comment lines 81-83 depending on what is missing
     */
 
     string line;

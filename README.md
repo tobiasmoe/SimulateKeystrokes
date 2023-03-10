@@ -5,7 +5,7 @@ Simple C++ program to simulate keystrokes based on a specific given dataset call
 This program also uses your cursor when running.
 
 ## Requirements
-* Webpage that can collect keystrokes.
+* Webpage that can collect keystrokes. Example: https://github.com/tobiasmoe/CollectKeystrokes
 * A way to run the cpp program, (Visual Studio 2019, Visual Studio Code, etc).
 * Windows.
 

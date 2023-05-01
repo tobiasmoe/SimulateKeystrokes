@@ -29,8 +29,8 @@ o = 79
 Keycodes for keys can be found here: https://www.toptal.com/developers/keycode
 """
 keycodes = ['76','69','79','78','65','82','68','79','32','68','73','67','65','80','82','73','79']
-FileToReadFrom = 'EnterYourInputFile.csv'
-FileToReadTo = 'EnterYourOutputFile.csv'
+FileToReadFrom = ''
+FileToReadTo = ''
 
 lengthKeycodes = len(keycodes)
 lengthDuration = 3+lengthKeycodes
@@ -115,9 +115,16 @@ with open(FileToReadFrom, mode='r') as input_file:
         keycodeCounterUp += 1
 
       # Add ',' if it is no the last value
-      if y < len(tempStorage)-1:
-        stringy += ','
+      # if y < len(tempStorage)-1:
+      stringy += ','
 
+    
+    # Need to manually add the enter key (needed if you are running SimulateKeystrokes program created by me)
+    # If enter key is already included earlier, then comment the next 3 lines
+    stringy += stringify(0,13,10)
+    stringy += ','
+    stringy += stringify(1,13,10)
+    
     # Append values to list
     formatted_row = [row[0], row[1], row[2], stringy]
     formatted_data.append(formatted_row)

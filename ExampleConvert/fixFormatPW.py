@@ -7,7 +7,7 @@ def stringify(keypress, keycode, timesincelastkey):
     string1 = str(keypress) + ':' + str(keycode) + ':' + str(timesincelastkey)
     return string1
 """
-Keycodes for PW1
+Keycodes for example password
 l = 76
 e = 69
 o = 79 
@@ -28,18 +28,23 @@ o = 79
 
 Keycodes for keys can be found here: https://www.toptal.com/developers/keycode
 """
-keycodes = ['76','69','79','78','65','82','68','79','32','68','73','32','65','80','82','73','79']
-FileToReadFrom = 'PW1.csv'
-FileToReadTo = 'PW1FixedFormatting.csv'
+keycodes = ['76','69','79','78','65','82','68','79','32','68','73','67','65','80','82','73','79']
+FileToReadFrom = 'EnterYourInputFile.csv'
+FileToReadTo = 'EnterYourOutputFile.csv'
 
 lengthKeycodes = len(keycodes)
 lengthDuration = 3+lengthKeycodes
 lengthLatency = lengthDuration+lengthKeycodes-1
 
 
+print('Password is set to:')
+for k in range(lengthKeycodes):
+  print(chr(int(keycodes[k])),sep='',end='',flush=True)
+print('')
 
 # Open the input CSV file for reading
 with open(FileToReadFrom, mode='r') as input_file:
+  print('Reading from file: ' + FileToReadFrom)
   reader = csv.reader(input_file)
   formatted_data = []
   # Go through every row in the csv file
@@ -119,6 +124,7 @@ with open(FileToReadFrom, mode='r') as input_file:
         
 # Open the output CSV file for writing
 with open(FileToReadTo, mode='w', newline='') as output_file:
+  print("Writing to file: " + FileToReadTo)
   writer = csv.writer(output_file)
   
   # Write the formatted data to the output CSV file
